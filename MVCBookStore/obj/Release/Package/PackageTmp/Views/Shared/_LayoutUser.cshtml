@@ -1,0 +1,157 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sách mới Store</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="iecss.css" />
+    <![endif]-->
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <script src="~/Scripts/windowopen.js"></script>
+    <script src="~/Scripts/boxOver.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="main_container">
+        <div class="top_bar" style="background-color: #e2e2e2; ">
+
+            <div class="languages">
+                <li>@Html.ActionLink("ĐĂNG KÍ", "Dangky", "Nguoidung")</li>
+                <li>@Html.ActionLink("ĐĂNG NHẬP", "Dangnhap", "Nguoidung")</li>
+
+            </div>
+        </div>
+        <div id="header">
+            <div id="logo"> <img src="~/images/logo_.png" alt="" border="0" width="237" height="140" /></div>
+            <div id="mid">
+                
+                <input type="text" placeholder="Tìm kiếm.." name="tukhoa" style="margin-top: 60px; height: 40px; width: 500px; ">
+                <button type="submit" name="timkiem" style="width: 40px; height: 40px;" ><i class="fa fa-search"></i></button>
+                
+            </div>
+
+            <li style="color: black;float: right; display: inline-block; margin-top: -50px; margin-right: 100px;">@Html.Action("GiohangPartial", "Giohang")</li>
+            <!-- end of oferte_content-->
+        </div>
+        <div id="main_content">
+            <div id="menu_tab" style="background-color: lightblue;">
+                <ul class="menu">
+                    <li style="padding: 30px;">@Html.ActionLink("TRANG CHỦ", "Index", "BookStore")</li>
+                </ul>
+
+            </div>
+            <!-- end of menu tab -->
+            <div class="left_content" style="margin-top: 15px;">
+
+                @Html.Action("Chude", "BookStore")
+                @Html.Action("Nhaxuatban", "BookStore")
+            </div>
+            <!-- end of left content -->
+            <div class="center_content">
+                <img src="~/images/tapchifobes.jpg" alt="" border="0" />
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+            <div class="center_content1">
+                
+            </div>
+
+            <!-- end of center content -->
+            <!-- end of right content -->
+        </div>
+        <!-- end of main content -->
+        <div class="footer">
+            <div class="rowfooter" style="width:80%;margin: auto;">
+                <div class="footerRow1" style="margin-top: 10px;">
+                    <h4>SACHMOI</h4>
+                    <li style="margin-right:15%;">Thành lập từ năm 2023, SACHMOI là web bán sách trực tuyến tại khu vực Việt Nam.</li>
+                    <li style="margin-right:15%;">
+                        Hiện nay, với nền tảng logistics và hệ thống thanh toán trực tuyến, SACHMOI mong muốn có thể trở thành một phần trong nhu cầu
+                        tiêu dùng của người Việt và hướng đến mục tiêu phục vụ cho hàng triệu khách hàng Việt trên toàn thế giới.
+                    </li>
+                </div>
+                <div class="footerRow2" style="margin-top: 10px;">
+                    <h4>PHƯƠNG THỨC THANH TOÁN:</h4>
+                    <div class="imgMethod" style="width: 100px; height:50px;">
+                        <img src="/images/money.png">
+                    </div>
+                </div>
+                <div class="footerRow3" style="margin-top: 10px;">
+                    <h4>CHÚNG TÔI:</h4>
+                    <div class="imgMethod" style="width: 100px; height:50px;">
+                        <img src="/images/fb_icon.png">
+                    </div>
+                </div>
+                <div class="footerRow4" style="margin-top: 10px;">
+                    <h4>LIÊN HỆ:</h4>
+                    <li>Hỗ trợ Khách hàng:</li>
+                    <li>cskh@sachmoi.com</li>
+                    <li>Địa chỉ:</li>
+                    <li>Tài nguyên và môi trường</li>
+                    <li>Số điện thoại:</li>
+                    <li>123456789JQKA</li>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <!-- end of main_container -->
+    
+    </div>
+</body>
+</html>
+
+<style>
+
+    .imgMethod img {
+        width: 50%;
+        float: left;
+    }
+    .footer {
+        height: 270px;
+        width: 100%;
+        background: lightblue;
+    }
+
+    .footerRow1 {
+        float: left;
+        width: 30%;
+        color: beige;
+    }
+
+    .footerRow2 {
+        float: left;
+        width: 25%;
+        color: beige;
+    }
+
+    .footerRow3 {
+        float: left;
+        width: 25%;
+        color: beige;
+    }
+
+    .footerRow4 {
+        float: right;
+        width: 20%;
+        color: beige;
+    }
+    
+    h4,li{
+        color:black;
+    }
+</style>

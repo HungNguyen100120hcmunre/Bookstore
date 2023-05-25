@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/tinymce/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    @Html.ActionLink("Login", "Login", "Admin")
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+    img {
+        width: 100px;
+        height: 150px;
+    }
+    
+</style>
